@@ -1,0 +1,15 @@
+<template name="member_navigation">
+	        <div class="col-md-2 column text-center">
+
+          	{{#if canModifyContent}}
+          	<h1>Conteúdo</h1>
+            <ul class="nav nav-pills nav-stacked">
+	            <li role="presentation" class="{{isActivePath regex='^\\/memberCenter/messages'}}" ><a href="{{pathFor 'member_center_messages'}}">Mensagens</a></li>
+                <li role="presentation" class="{{isActivePath regex='^\\/memberCenter/esferajovemlist'}}" ><a href="{{pathFor 'submissions_table'}}">Esfera Jovem</a></li>
+                <li role="presentation" class="{{isActivePath regex='^\\/admin/'}}" ><a href="/admin/blog">Blog Admin</a></li>
+
+            </ul>
+            {{/if}}
+
+        </div>
+</template>

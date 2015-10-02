@@ -1,0 +1,9 @@
+<template name="edit_message">
+    <div class="container">
+        {{> member_navigation}}
+        <div class="col-md-10 column text-center container">
+            <h1>Editar</h1> {{> quickForm collection="Messages" doc=this id="updateMessage" type="update"}}
+            <hr> {{> quickRemoveButton collection="Messages" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+        </div>
+    </div>
+</template>

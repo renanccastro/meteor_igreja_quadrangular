@@ -1,0 +1,76 @@
+	body {
+	    background-color: #FFFFFF;
+	}
+	
+	.140x140 {
+	    width: 10px;
+	    height: 10px;
+	}
+	
+	.col-centered {
+	    text-align: center;
+	}
+	
+	.footer {
+	    margin-top: 10%;
+	    margin-bottom: 2%;
+	}
+	
+	h1 {
+	    font-family: 'Cookie', cursive;
+	}
+	
+	h2 p h4 h3 {
+	    font-family: 'Open Sans', sans-serif;
+	}
+	
+	img[alt="140x140"] {
+	    width: 140px;
+	    height: 140px;
+	}
+	
+	img[alt="120x120"] {
+	    width: 80px;
+	    height: 80px;
+	}
+	img[alt="80x80"] {
+	    width: 80px;
+	    height: 80px;
+	}
+
+	
+	.list-group a {
+	    color: black;
+	}
+	
+	.list-group a:hover {
+	    color: red;
+	    text-decoration: none
+	}
+	
+	.messages_div {
+	    overflow: hidden;
+	    padding: 10px 10px 10px 10px;
+	    width: 250px;
+	    height: 300px;
+	    background-color: #d7d7d7;
+	    margin-top: 10px;
+	}
+	
+	.ellipsis {
+	    text-overflow: ellipsis;
+	}
+	
+	.tocenter {
+	    margin: 0 auto;
+	    display: inline;
+	}
+	
+	.overflow {
+	    /**
+   * Required properties to achieve text-overflow
+   */
+	    
+	    white-space: nowrap;
+	    overflow: hidden;
+	}

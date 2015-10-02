@@ -1,0 +1,9 @@
+<template name="recados">
+    <div class="container">
+        {{> member_navigation}}
+        <div class="col-md-10 column text-center container">
+  			<h1>Recados</h1>
+  			{{> quickForm collection="Recados" doc=this id="addRecados" type="insert"}}
+        </div>
+    </div>
+</template>

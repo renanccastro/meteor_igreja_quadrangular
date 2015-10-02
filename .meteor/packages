@@ -1,0 +1,33 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+autopublish
+insecure
+iron:router
+accounts-password
+jquery
+coffeescript
+matteodem:easy-search
+andruschka:bootstrap-image-gallery
+lepozepo:s3
+tomi:upload-jquery
+aslagle:reactive-table
+service-configuration
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3
+accounts-admin-ui-bootstrap-3
+roles
+fortawesome:fontawesome
+aldeed:autoform
+aldeed:collection2
+zimme:active-route
+aldeed:delete-button
+mrt:flash-messages
+ryw:blog
+cooperm:side-comments
+yogiben:admin
+mrt:accounts-facebook-cordova

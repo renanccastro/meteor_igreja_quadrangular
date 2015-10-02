@@ -1,0 +1,66 @@
+<template name="form_esfera">
+	<form>
+		<legend>Envie sua contribuição, dúvida ou sugestão!</legend>
+
+		<div class="form-group">
+			<label for="inputName">Nome</label>
+			<input type="name" class="form-control" id="inputName" placeholder="Digite aqui o seu nome.">
+			<p class="help-block">O seu nome não é obrigatório, mas nos ajuda a te identificar durante o programa.</p>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail">Email</label>
+			<input type="email" class="form-control" id="inputEmail" placeholder="Digite aqui o seu email.">
+			<p class="help-block">O seu email não é obrigatório, mas nos ajuda a construir uma base de contato com você.</p>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="control-label" for="select_quadro">Selecione o quadro</label>
+
+			<div class="controls">
+				<select class="form-control" id="select_quadro" name="select_quadro">
+					<option>Pé na Estrada</option>
+					<option>Tudo Posso</option>
+					<option>Pega essa, Pastor!</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- File Button --> 
+		<div class="control-group">
+			<label class="control-label" for="filebutton">Envie o seu arquivo</label>
+			<div class="controls">
+				<input id="filebutton" name="filebutton" class="input-file form-control" type="file" multiple><br>
+				{{#each files}}
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width:{{percent_uploaded}}%;">
+						{{percent_uploaded}}%
+					</div>
+				</div>
+				{{/each}}
+				<p class="help-block">Você pode escolher mais de um arquivo. Aceitamos todos os formatos de vídeo, imagem, pdf, documentos, etc. Tamanho máximo permitido: 150MB.</p>
+			</div>
+		</div>
+		<br>
+		<!-- Textarea -->
+		<div class="control-group">
+			<label class="control-label" for="comentario">Comentário</label>
+			<div class="controls">                     
+				<textarea class="form-control" rows="6" cols="80" id="comentario" name="comentario">Deixe o seu comentário, descrevendo a sua contribuição. Conte aqui como você filmou, algum fato engraçado, etc. Também não é obrigatório.</textarea>
+			</div>
+		</div>
+		<br>
+		{{#if isUploadInProgress}}
+		<button type="submit center-block" class="btn btn-success disabled">Enviar</button><br><br>
+
+		{{else}}
+		<button type="submit center-block" class="btn btn-success">Enviar</button><br><br>
+		{{/if}}
+
+		<div class="alert alert-success alert-dismissible" role="alert" style="display: none;" id="success">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<strong>Sucesso!</strong> Contribuição recebida com sucesso!
+		</div>
+
+	</form>
+
+</template>

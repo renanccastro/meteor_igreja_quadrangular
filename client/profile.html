@@ -1,0 +1,11 @@
+<template name="profile.html">
+        <div class="col-md-2 column text-center">
+            <ul class="nav nav-pills nav-stacked">
+                {{#if canModifyContent}}
+                <li role="presentation" class="{{#if first}}active{{/if}}" onclick="current=0;"><a href="#">Mensagens</a></li>
+                {{/if}}
+                <li role="presentation" class="{{#if second}}active{{/if}}" onclick="current=1;"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+        </div>
+</template>

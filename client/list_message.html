@@ -1,0 +1,26 @@
+<template name="list_messages">
+    <h1>Mensagens</h1>
+    <p><a class="btn btn-success glyphicon glyphicon-plus" href="{{pathFor 'addMessage'}}" role="button">Adicionar</a></p>
+    <table class="table table-hover" style="word-break: break-all;">
+        <thead>
+            <tr>
+                <th class="col-md-3">Título</th>
+                <th class="col-md-3">Autor</th>
+                <th class="col-md-2">Data</th>
+                <th class="col-md-3">URL/HTML</th>
+                <th class="col-md-1">Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each messages}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{date}}</td>
+                <td>{{url}}</td>
+                <td>{{#linkTo route='editmessage'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

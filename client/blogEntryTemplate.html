@@ -1,0 +1,55 @@
+<template name="blogEntryTemplate">
+	  <div> {{> blogShow2}}</div>
+</template>
+
+<template name="blogShow2">
+  <div id="meteor-blog" class="blog-single">
+    {{#if session "postHasFeaturedImage"}}
+      {{> blogShowFeaturedImage}}
+    {{/if}}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 col-md-offset-2">
+          {{> blogShowBody2}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="blogShowBody2">
+  <article class="post">
+    {{#unless titleBackground}}
+      <h1 class="mb-title text-center">
+        {{title}}
+      </h1>
+      <div class="post-meta text-center">
+        {{#if isAdmin}}
+           <small><a href="#" id="edit-post">edit</a></small>
+           --
+        {{/if}}
+        Por {{authorName}} em {{blogFormatDate publishedAt}}
+        {{> blogTags }}
+      </div>
+    {{/unless}}
+    <div id="commentable-area" class="the-content">
+      {{{html}}}
+    </div>
+  </article>
+  <div class="row">
+  	<div class= "col-md-2">
+  	  	<img src="{{featuredImage}}" alt="80x80" class="img-responsive left-block float">
+  	</div>
+  	<div class="col-md-10" style="word-break: break-all;">
+  		<h4>Renan Camargo de Castro</h4>
+  		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt dui sit amet placerat facilisis. Pellentesque orci arcu, rhoncus vel pharetra a, laoreet non dolor. Suspendisse volutpat erat quis dignissim mattis. Curabitur fringilla feugiat sapien, a semper lectus rutrum sed. Phasellus quis finibus orci, id efficitur velit. Curabitur elementum condimentum neque ut commodo. Cras sollicitudin, mi et vestibulum tempor, lacus augue molestie leo, vel finibus libero ex ut sapien. Phasellus non aliquet eros. In sollicitudin vitae lorem quis tristique.
+  	</div>
+  </div>
+  
+  
+  <div class="blog-back-link pull-left">
+    <a href="{{pathFor 'blogIndex'}}"><i class="fa fa-caret-left"></i>Back to the Blog</a>
+  </div>
+  {{> shareit shareData}}
+  {{> disqus this}}
+</template>
