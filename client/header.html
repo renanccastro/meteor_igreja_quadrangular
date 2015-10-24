@@ -39,21 +39,27 @@
                             <a href="/userAdmin">Administração de membros</a>
                         </li>
                         {{/if}}
+                        <li class="{{isActivePath '/loginMobile'}} hidden-md hidden-lg">
+                            {{#if currentUser}}
+                                <a class="logout_button" href="/">Logout</a>
+                            {{else}}
+                                <a href="/loginMobile">Login</a>
+                            {{/if}}
+                        </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
                         <li class="dropdown">
                             <a>
 								{{> loginButtons}}
 								</a>
                         </li>
-
                     </ul>
 
-                    <form class="navbar-form navbar-left" role="search" name="form">
+                    <!--<form class="navbar-form navbar-left" role="search" name="form">-->
                         <!-- {{> normalSearch}} -->
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                    </ul>
+                    <!--</form>-->
+                    <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!--</ul>-->
                 </div>
 
             </nav>

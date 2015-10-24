@@ -18,7 +18,6 @@ tomi:upload-jquery
 aslagle:reactive-table
 service-configuration
 twbs:bootstrap
-ian:accounts-ui-bootstrap-3
 accounts-admin-ui-bootstrap-3
 roles
 fortawesome:fontawesome
@@ -31,3 +30,6 @@ ryw:blog
 cooperm:side-comments
 yogiben:admin
 mrt:accounts-facebook-cordova
+ian:accounts-ui-bootstrap-3
+momentjs:moment
+bootstrap-alerts

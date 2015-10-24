@@ -50,11 +50,9 @@
 	
 	.messages_div {
 	    overflow: hidden;
-	    padding: 10px 10px 10px 10px;
-	    width: 250px;
-	    height: 300px;
-	    background-color: #d7d7d7;
-	    margin-top: 10px;
+		border-radius: 5px 5px 5px 5px;
+        padding: 10px 10px 10px 10px;
+	    background-color: #ebebeb;
 	}
 	
 	.ellipsis {

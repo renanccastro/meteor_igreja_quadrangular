@@ -13,7 +13,7 @@ if (Meteor.isClient) {
         layoutTemplate: 'main'
     });
 
-
+    Router.route('/loginMobile',{name: "loginMobile",template: 'LoginMobile'});
     Router.route('/memberCenter/messages/addMessage',{name: "addMessage",template: 'add_message'});
     Router.route('/memberCenter/esferajovemlist',{name: "submissions_table",template: 'submissions_table'});
 
