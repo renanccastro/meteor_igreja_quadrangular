@@ -1,0 +1,18 @@
+<template name="blogListTemplate">
+    <h1>Welcome to my Blog</h1>
+    <ul>
+        {{#if blogReady}}
+            {{#each posts}}
+                <li>
+                    <h2>{{title}}</h2>
+                    <p>Published on {{publishedAt}}</p>
+                    <p>Excerpt: {{excerpt}}</p>
+                </li>
+            {{else}}
+                <li>No posts found.</li>
+            {{/each}}
+        {{else}}
+            <li>Loading...</li>
+        {{/if}}
+    </ul>
+</template>

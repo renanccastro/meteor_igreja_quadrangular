@@ -81,27 +81,27 @@
                         <div class="form-group">
                             <label for="name" class="col-md-3 control-label">Nome</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="name" placeholder="Nome">
+                                <input type="text" class="form-control" name="name" id="name-register" placeholder="Nome">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="col-md-3 control-label">Email</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="email" placeholder="Email">
+                                <input type="text" class="form-control" name="email" id="email-register" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="col-md-3 control-label">Password</label>
                             <div class="col-md-9">
-                                <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                <input type="password" class="form-control" name="passwd" id="password-register" placeholder="Password">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="gender" class="col-md-3 control-label">Sexo</label>
                             <div class="col-md-9">
-                                <div class="radio">
+                                <div class="radio" id="gender-register">
                                     <label><input type="radio" id="login-gender-1" name="login-gender" value="m"> Masculino</label>
                                     <label><input type="radio" id="login-gender-2" name="login-gender" value="f"> Feminino</label>
                                 </div>
@@ -111,7 +111,7 @@
                             <label for="capela" class="col-md-3 control-label">Capela</label>
                             <div class="col-md-9">
                                 <div class="select-dropdown">
-                                    <select id="login-capela">
+                                    <select id="capela-register">
                                         <option value="zn">Zona Norte</option>
                                         <option value="zn">Zona Sul</option>
                                         <option value="vsp">Vila São Pedro</option>
@@ -125,10 +125,8 @@
                             <div style="margin-top:10px" class="form-group">
                                 <!-- Button -->
 
-                                <div class="col-sm-12 controls">
-                                    <a id="btn-signup" href="#" class="btn btn-success">Cadastrar  </a>
-                                    <a id="btn-fbsignup" href="#" class="btn btn-primary">Cadastrar com Facebook</a>
-
+                                <div class="col-sm-12 controls text-center">
+                                    <input id="btn-login" href="#" type="submit" class="btn btn-success" value="Cadastrar">
                                 </div>
                             </div>
 
