@@ -1,0 +1,12 @@
+<template name="member_center_messages">
+    <div class="container">
+        {{> member_navigation}}
+        <div class="text-center">
+            <h1>Mensagens</h1>
+            <p><a class="btn btn-success glyphicon glyphicon-plus" href="{{pathFor 'addMessage'}}" role="button">Adicionar</a></p>
+        </div>
+        <div class="table-responsive">
+            {{> list_messages}}
+        </div>
+    </div>
+</template>

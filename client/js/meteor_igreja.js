@@ -1,7 +1,7 @@
 current = 0;
 if (Meteor.isClient) {
     Blog.config({
-        blogShowTemplate: 'blogEntryTemplate',
+        //blogShowTemplate: 'blogEntryTemplate',
 
         comments: {
             disqusShortname: 'ieqpirassununga'
@@ -155,24 +155,6 @@ if (Meteor.isClient) {
 
     })
 
-    accountsUIBootstrap3.setLanguage('pt-BR');
-    Template.header.events({
-        'click .dropdown-toggle': function (e) {
-            e.preventDefault();
-            $(e.target).find('.dropdown-menu').toggle();
-        },
-        'submit form': function (event) {
-            event.preventDefault();
-            var body = event.target.search_text.value;
-            console.log(body);
-            EasySearch
-                .getComponentInstance({
-                    index: 'posts'
-                })
-                .search(body);
-        }
-
-    });
     Template.normalSearch.events({});
     Template.messages_submit.events({
 
@@ -243,13 +225,6 @@ if (Meteor.isClient) {
     Template.recados.helpers({
         'recados': function () {
             return Recados.find();
-        }
-    });
-
-    Template.header.helpers({
-        // check if user is an admin
-        isAdminUser: function () {
-            return Roles.userIsInRole(Meteor.user(), ['admin']);
         }
     });
     Template.member_center.helpers({

@@ -30,22 +30,27 @@ Template.LoginMobile.events({
     },
     'submit #signupform' : function(e){
         e.preventDefault();
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var password = $('#password').val();
-        var gender = $('#gender').val();
-        var capela = $('#capela').val();
-        console.log(name + )
+        var name = $('#name-register').val();
+        var email = $('#email-register').val();
+        var password = $('#password-register').val();
+        var gender = $('input[name=login-gender]:checked', '#signupform').val();
+        var capela = $('#capela-register').val();
         Accounts.createUser({
-            name: name,
             email: email,
             password: password,
-            gender: gender,
-            capela: capela
+            profile:{
+                name: name,
+                gender: gender,
+                capela: capela
+            }
+        },function(err) {
+            if (err)
+                Alerts.add("Falha ao criar usuário!");
+            else
+                Router.go('/');
         });
     }
 
 });
 Template.LoginMobile.helpers({
-
 });

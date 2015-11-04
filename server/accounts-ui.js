@@ -6,10 +6,10 @@ if (Meteor.isServer) {
 
     Meteor.startup(function () {
         // bootstrap the admin user if they exist -- You'll be replacing the id later
-        if (Meteor.users.findOne("bXfLj4nfXSQP4LyKK")){
-            Roles.addUsersToRoles("bXfLj4nfXSQP4LyKK", ['admin']);
-             Roles.addUsersToRoles("bXfLj4nfXSQP4LyKK", ['blogAdmin']);
-              Roles.addUsersToRoles("bXfLj4nfXSQP4LyKK", ['blogAuthor']);
+        if (Meteor.users.findOne("vnKEqpS8g3GD9rafX")){
+            Roles.addUsersToRoles("vnKEqpS8g3GD9rafX", ['admin']);
+            Roles.addUsersToRoles("vnKEqpS8g3GD9rafX", ['blogAdmin']);
+            Roles.addUsersToRoles("vnKEqpS8g3GD9rafX", ['blogAuthor']);
           }
 
         // create a couple of roles if they don't already exist (THESE ARE NOT NEEDED -- just for the demo)

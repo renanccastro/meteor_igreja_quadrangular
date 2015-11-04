@@ -72,3 +72,7 @@
 	    white-space: nowrap;
 	    overflow: hidden;
 	}
+	em {
+		font-style: normal;         /* Removes italics */
+		text-decoration: underline; /* Makes underline */
+	}

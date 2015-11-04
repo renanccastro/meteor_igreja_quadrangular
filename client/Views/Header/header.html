@@ -41,7 +41,7 @@
                         {{/if}}
                         <li class="{{isActivePath '/loginMobile'}} hidden-md hidden-lg">
                             {{#if currentUser}}
-                                <a class="logout_button" href="/">Logout</a>
+                                <a class="logout_button" href="/"><em>{{getName}}</em> - Logout</a>
                             {{else}}
                                 <a href="/loginMobile">Login</a>
                             {{/if}}
